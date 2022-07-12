@@ -18,7 +18,9 @@ const App = () => (
 		<React.Suspense fallback='Loading...'>
 			<BtnComp />
 		</React.Suspense>
-		<React.Suspense fallback='Loading...'>{/* <EISGrid /> */}</React.Suspense>
+		<React.Suspense fallback='Loading...'>
+			<EISGrid />
+		</React.Suspense>
 	</div>
 )
 
