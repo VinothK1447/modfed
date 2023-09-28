@@ -1,10 +1,10 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
 
-const ReceiverApp = React.lazy(() => import('PROVIDER/App'))
-const ReceiverGridApp = React.lazy(() => import('PROVIDER/Grid'))
-const BtnComp = React.lazy(() => import('EISPortal/Btn'))
-const EISGrid = React.lazy(() => import('EISPortal/EISGrid'))
+const ReceiverApp = React.lazy(() => import('PROVIDER/App'));
+const ReceiverGridApp = React.lazy(() => import('PROVIDER/Grid'));
+const AUMComp = React.lazy(() => import('PROVIDER/AUM'));
+// const EISGrid = React.lazy(() => import('PROVIDER/EISGrid'));
 
 const App = () => (
 	<div className='provider-app'>
@@ -16,12 +16,12 @@ const App = () => (
 			<ReceiverGridApp />
 		</React.Suspense>
 		<React.Suspense fallback='Loading...'>
-			<BtnComp />
+			<AUMComp />
 		</React.Suspense>
-		<React.Suspense fallback='Loading...'>
+		{/* <React.Suspense fallback='Loading...'>
 			<EISGrid />
-		</React.Suspense>
+		</React.Suspense> */}
 	</div>
-)
+);
 
-export default App
+export default App;
